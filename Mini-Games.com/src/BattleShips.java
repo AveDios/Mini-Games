@@ -119,14 +119,14 @@ public class BattleShips {
         int x = -1, y = -1;
         do {
             Scanner sc = new Scanner(System.in);
-            System.out.println("Enter X coord: ");
-            x = sc.nextInt();
             System.out.println("Enter Y coord: ");
+            x = sc.nextInt();
+            System.out.println("Enter X coord: ");
             y = sc.nextInt();
 
             if ((x >= 0 && x < nRows) && (y >= 0 && y < nCols)) {
                 if (grid[x][y] == "x") {
-                    System.out.println("Boom! You sunk the shop!");
+                    System.out.println("Boom! You sunk the ship!");
                     grid[x][y] = "!";
                     --BattleShips.cShips;
                 } else if (grid[x][y] == "@") {
@@ -208,3 +208,4 @@ public class BattleShips {
         System.out.println();
     }
 }
+

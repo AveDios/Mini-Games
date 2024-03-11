@@ -1,5 +1,12 @@
+
+import Games.BS.BattleShips;
+import Games.GTN.GuessTheNumber;
+import Games.HangMan.Hangman;
+import Games.Quiz.Quiz;
+import Games.RPS.RockPaperScissors;
+import Games.TTT.Tic_Tac_Toe;
+
 import java.util.Locale;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -15,10 +22,10 @@ public class Main {
             System.out.println();
             System.out.println("Wellcome in Mini-Games.com");
             System.out.println("\n Choose the what you want to play:.");
-            System.out.println("1. Hangman.");
+            System.out.println("1. Games.HangMan.Hangman.");
             System.out.println("2. Russian roulette.");
             System.out.println("3. Tic Tac Toe.");
-            System.out.println("4. Quiz.");
+            System.out.println("4. Games.Quiz.Quiz.");
             System.out.println("5. Rock, Paper, Scissors.");
             System.out.println("6. Seals (Ships)");
             System.out.println("0. Exit");
@@ -29,25 +36,30 @@ public class Main {
             {
                 case 1 :
                     // Gra w wisielca
-                    Hangman.main(args);
+                    Hangman.start();
                     break;
                 case 2:
-                    GuessTheNumber.main(args);
+                    // Gra w zgadywanie numeru
+                    GuessTheNumber.start();
                     break;
                 case 3:
                     // Gra w Kółko i krzyżyk
-                    Tic_Tac_Toe.main(args);
+                    Tic_Tac_Toe.start();
                     break;
                 case 4:
-                    Quiz.main(args);
+                    // Games.Quiz.Quiz
+                    Quiz.start();
                     break;
                 case 5:
-                    RockPaperScissors.main(args);
+                    // Papier kamień i nożyce
+                    RockPaperScissors.start();
                     break;
                 case 6:
-                    BattleShips.main(args);
+                    // Statki
+                    BattleShips.start();
                     break;
                 case 0:
+                    // Wyjście
                     System.out.println("Goodbye :)");
                     System.exit(0);
                     break;
